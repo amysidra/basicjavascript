@@ -15,13 +15,8 @@ async function getData(url) {
 
 // function 
 async function listData(url) {
-    try {
-        const lists = await getData(url)
-        return lists
-    } catch (error) {
-        console.log("disini error function 2")
-    }
+    const lists = await getData(url)
+    console.log(lists)
 }
 
-const listproduct = await listData(products)
-console.log(listproduct)
+listData(products);
